@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rel_header">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_20sdp">
+
+        <TextView
+            android:id="@+id/tv_upgrade_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/upgrade_account"
+            android:textColor="@color/colorWhite"
+            android:padding="@dimen/_8sdp"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableStart="@drawable/ic_icon_upgrade_account"/>
+
+        <TextView
+            android:id="@+id/tv_book_lady"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/book_for_lady"
+            android:textColor="@color/colorWhite"
+            android:drawablePadding="@dimen/_10sdp"
+            android:padding="@dimen/_8sdp"
+            android:drawableStart="@drawable/ic_icon_book_lady"
+            android:layout_marginTop="@dimen/_16sdp"/>
+
+        <TextView
+            android:id="@+id/tv_language"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/Language"
+            android:textColor="@color/colorWhite"
+            android:padding="@dimen/_8sdp"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableStart="@drawable/ic_icon_language"
+            android:layout_marginTop="@dimen/_36sdp"/>
+
+        <TextView
+            android:id="@+id/tv_about_us"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/about_us"
+            android:textColor="@color/colorWhite"
+            android:padding="@dimen/_8sdp"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableStart="@drawable/ic_icon_about_us"
+            android:layout_marginTop="@dimen/_16sdp"/>
+
+        <TextView
+            android:id="@+id/tv_live_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/live_chat"
+            android:textColor="@color/colorWhite"
+            android:padding="@dimen/_8sdp"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableStart="@drawable/ic_icon_live_chat"
+            android:layout_marginTop="@dimen/_16sdp"/>
+
+        <TextView
+            android:id="@+id/tv_message_manager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/message_manager"
+            android:textColor="@color/colorWhite"
+            android:padding="@dimen/_8sdp"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableStart="@drawable/ic_icon_message_manager"
+            android:layout_marginTop="@dimen/_16sdp"/>
+
+        <TextView
+            android:id="@+id/tv_asked_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/asked_questions"
+            android:textColor="@color/colorWhite"
+            android:padding="@dimen/_8sdp"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableStart="@drawable/ic_icon_asked"
+            android:layout_marginTop="@dimen/_16sdp"/>
+
+        <TextView
+            android:id="@+id/tv_terms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/terms_of_use"
+            android:textColor="@color/colorWhite"
+            android:padding="@dimen/_8sdp"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableStart="@drawable/ic_icon_terms"
+            android:layout_marginTop="@dimen/_16sdp"/>
+
+        <TextView
+            android:id="@+id/tv_notifications"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/notifications"
+            android:textColor="@color/colorWhite"
+            android:padding="@dimen/_8sdp"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableStart="@drawable/ic_icon_notifications"
+            android:layout_marginTop="@dimen/_16sdp"/>
+
+        <TextView
+            android:id="@+id/tv_create_business_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/create_business_account"
+            android:textColor="@color/colorWhite"
+            android:padding="@dimen/_8sdp"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableStart="@drawable/ic_icon_create_business_account"
+            android:layout_marginTop="@dimen/_16sdp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

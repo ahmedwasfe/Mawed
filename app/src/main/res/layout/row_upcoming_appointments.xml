@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_45sdp"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:layout_marginBottom="@dimen/_8sdp"
+    android:padding="@dimen/_4sdp"
+    android:background="@drawable/bg_spinner">
+
+    <TextView
+        android:id="@+id/tv_salon_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:text="Salon name"
+        android:textSize="14sp"
+        android:textColor="@color/colorMainText"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_centerVertical="true"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="@dimen/_2sdp"
+        android:layout_height="match_parent"
+        android:background="@color/colorViewGrey"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/tv_salon_name"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_4sdp"/>
+
+    <TextView
+        android:id="@+id/tv_salon_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:text="Sunday 8/20 - 10 p.m"
+        android:textSize="14sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:layout_toEndOf="@+id/view"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>

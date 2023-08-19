@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigations"
+    app:startDestination="@id/nav_salon_profile">
+
+    <fragment android:id="@+id/nav_salon_profile"
+        android:label="@string/my_account"
+        android:name="com.raiyansoft.mawed.ui.fragments.salon.profile.ProfileFragment"
+        tools:layout="@layout/fragment_salon_profile"/>
+
+
+</navigation>

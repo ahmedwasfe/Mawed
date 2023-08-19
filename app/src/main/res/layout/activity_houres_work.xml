@@ -1,0 +1,1809 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.raiyansoft.mawed.ui.activities.salon.WorkHouresActivity">
+
+    <RelativeLayout
+        android:id="@+id/rel_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:src="@drawable/ic_icon_arrow_back"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/work_hours"
+            android:textColor="@color/colorMainText"
+            android:textSize="22sp" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rel_toolbar"
+        android:layout_above="@id/ll_btns">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_saturday_work_hour"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_spinner"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/tv_saturday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorSubButtonText"
+                        android:text="@string/saturday"
+                        android:textAlignment="center"
+                        android:layout_centerVertical="true"/>
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="@dimen/_2sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_toEndOf="@id/tv_saturday"
+                        android:background="#E3E3E3"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_centerVertical="true"/>
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/spinner_saturday_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorSubButtonText"
+                        android:backgroundTint="@color/colorLightGrey"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_toEndOf="@id/view"
+                        android:layout_toStartOf="@id/iv_saturday_arrow_hour"/>
+
+                    <ImageView
+                        android:id="@+id/iv_saturday_arrow_hour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_6sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+                <net.cachapa.expandablelayout.ExpandableLayout
+                    android:id="@+id/expandable_saturday_layout_hour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:el_duration="1000"
+                    app:el_expanded="false"
+                    app:el_parallax="0.5">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/ll_saturday_start_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_4sdp"
+                            android:padding="@dimen/_4sdp"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:background="@drawable/bg_work_hour">
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/ll_saturday_start_from_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_saturday_text_start_from_hour"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text="@string/from_hour"
+                                    android:textColor="@color/colorSubButtonText" />
+
+                                <TextView
+                                    android:id="@+id/tv_saturday_start_time_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text=""
+                                    android:textColor="@color/colorSubButtonText"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:background="@drawable/bg_spinner" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/ll_saturday_start_to_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_saturday_text_start_to_hour"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text="@string/to_hour"
+                                    android:textColor="@color/colorSubButtonText" />
+
+                                <TextView
+                                    android:id="@+id/tv_saturday_end_time_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text=""
+                                    android:textColor="@color/colorSubButtonText"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:background="@drawable/bg_spinner" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_saturday_end_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_4sdp"
+                            android:padding="@dimen/_4sdp"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:background="@drawable/bg_work_hour"
+                            android:layout_below="@id/ll_saturday_start_time">
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/ll_end_from_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_saturday_text_end_from_hour"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text="@string/from_hour"
+                                    android:textColor="@color/colorSubButtonText" />
+
+                                <TextView
+                                    android:id="@+id/tv_saturday_start_time_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text=""
+                                    android:textColor="@color/colorSubButtonText"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:background="@drawable/bg_spinner" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/ll_saturday_end_to_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_saturday_end_start_to_hour"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text="@string/to_hour"
+                                    android:textColor="@color/colorSubButtonText" />
+
+                                <TextView
+                                    android:id="@+id/tv_saturday_end_time_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text=""
+                                    android:textColor="@color/colorSubButtonText"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:background="@drawable/bg_spinner" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                </net.cachapa.expandablelayout.ExpandableLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_sunday_work_hour"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_spinner"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/tv_sunday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorSubButtonText"
+                        android:text="@string/sunday"
+                        android:textAlignment="center"
+                        android:layout_centerVertical="true"/>
+
+                    <View
+                        android:id="@+id/view_sunday"
+                        android:layout_width="@dimen/_2sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_toEndOf="@id/tv_sunday"
+                        android:background="#E3E3E3"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_centerVertical="true"/>
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/spinner_sunday_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorSubButtonText"
+                        android:backgroundTint="@color/colorLightGrey"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_toEndOf="@id/view_sunday"
+                        android:layout_toStartOf="@id/iv_sunday_arrow_hour"/>
+
+                    <ImageView
+                        android:id="@+id/iv_sunday_arrow_hour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_6sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+                <net.cachapa.expandablelayout.ExpandableLayout
+                    android:id="@+id/expandable_sunday_layout_hour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:el_duration="1000"
+                    app:el_expanded="false"
+                    app:el_parallax="0.5">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/ll_sunday_start_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_4sdp"
+                            android:padding="@dimen/_4sdp"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:background="@drawable/bg_work_hour">
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/ll_sunday_start_from_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_sunday_text_start_from_hour"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text="@string/from_hour"
+                                    android:textColor="@color/colorSubButtonText" />
+
+                                <TextView
+                                    android:id="@+id/tv_sunday_start_time_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text=""
+                                    android:textColor="@color/colorSubButtonText"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:background="@drawable/bg_spinner" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/ll_sunday_start_to_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_sunday_text_start_to_hour"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text="@string/to_hour"
+                                    android:textColor="@color/colorSubButtonText" />
+
+                                <TextView
+                                    android:id="@+id/tv_sunday_end_time_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text=""
+                                    android:textColor="@color/colorSubButtonText"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:background="@drawable/bg_spinner" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_sunday_end_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_4sdp"
+                            android:padding="@dimen/_4sdp"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:background="@drawable/bg_work_hour"
+                            android:layout_below="@id/ll_sunday_start_time">
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/ll_sunday_end_from_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_sunday_text_end_from_hour"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text="@string/from_hour"
+                                    android:textColor="@color/colorSubButtonText" />
+
+                                <TextView
+                                    android:id="@+id/tv_sunday_start_time_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text=""
+                                    android:textColor="@color/colorSubButtonText"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:background="@drawable/bg_spinner" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/ll_sunday_end_to_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_sunday_end_start_to_hour"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text="@string/to_hour"
+                                    android:textColor="@color/colorSubButtonText" />
+
+                                <TextView
+                                    android:id="@+id/tv_sunday_end_time_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text=""
+                                    android:textColor="@color/colorSubButtonText"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:background="@drawable/bg_spinner" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                </net.cachapa.expandablelayout.ExpandableLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_monday_work_hour"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_spinner"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/tv_monday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorSubButtonText"
+                        android:text="@string/monday"
+                        android:textAlignment="center"
+                        android:layout_centerVertical="true"/>
+
+                    <View
+                        android:id="@+id/view_monday"
+                        android:layout_width="@dimen/_2sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_toEndOf="@id/tv_monday"
+                        android:background="#E3E3E3"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_centerVertical="true"/>
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/spinner_monday_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorSubButtonText"
+                        android:backgroundTint="@color/colorLightGrey"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_toEndOf="@id/view_monday"
+                        android:layout_toStartOf="@id/iv_monday_arrow_hour"/>
+
+                    <ImageView
+                        android:id="@+id/iv_monday_arrow_hour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_6sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+                <net.cachapa.expandablelayout.ExpandableLayout
+                    android:id="@+id/expandable_monday_layout_hour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:el_duration="1000"
+                    app:el_expanded="false"
+                    app:el_parallax="0.5">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/ll_monday_start_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_4sdp"
+                            android:padding="@dimen/_4sdp"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:background="@drawable/bg_work_hour">
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/ll_monday_start_from_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_monday_text_start_from_hour"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text="@string/from_hour"
+                                    android:textColor="@color/colorSubButtonText" />
+
+                                <TextView
+                                    android:id="@+id/tv_monday_start_time_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text=""
+                                    android:textColor="@color/colorSubButtonText"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:background="@drawable/bg_spinner" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/ll_monday_start_to_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_monday_text_start_to_hour"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text="@string/to_hour"
+                                    android:textColor="@color/colorSubButtonText" />
+
+                                <TextView
+                                    android:id="@+id/tv_monday_end_time_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text=""
+                                    android:textColor="@color/colorSubButtonText"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:background="@drawable/bg_spinner" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_monday_end_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_4sdp"
+                            android:padding="@dimen/_4sdp"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:background="@drawable/bg_work_hour"
+                            android:layout_below="@id/ll_monday_start_time">
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/ll_monday_end_from_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_monday_text_end_from_hour"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text="@string/from_hour"
+                                    android:textColor="@color/colorSubButtonText" />
+
+                                <TextView
+                                    android:id="@+id/tv_monday_start_time_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text=""
+                                    android:textColor="@color/colorSubButtonText"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:background="@drawable/bg_spinner" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/ll_monday_end_to_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_monday_end_start_to_hour"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text="@string/to_hour"
+                                    android:textColor="@color/colorSubButtonText" />
+
+                                <TextView
+                                    android:id="@+id/tv_monday_end_time_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text=""
+                                    android:textColor="@color/colorSubButtonText"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:background="@drawable/bg_spinner" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                </net.cachapa.expandablelayout.ExpandableLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_tuesday_work_hour"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_spinner"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/tv_tuesday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorSubButtonText"
+                        android:text="@string/tuesday"
+                        android:textAlignment="center"
+                        android:layout_centerVertical="true"/>
+
+                    <View
+                        android:id="@+id/view_tuesday"
+                        android:layout_width="@dimen/_2sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_toEndOf="@id/tv_tuesday"
+                        android:background="#E3E3E3"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_centerVertical="true"/>
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/spinner_tuesday_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorSubButtonText"
+                        android:backgroundTint="@color/colorLightGrey"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_toEndOf="@id/view_tuesday"
+                        android:layout_toStartOf="@id/iv_tuesday_arrow_hour"/>
+
+                    <ImageView
+                        android:id="@+id/iv_tuesday_arrow_hour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_6sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+                <net.cachapa.expandablelayout.ExpandableLayout
+                    android:id="@+id/expandable_tuesday_layout_hour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:el_duration="1000"
+                    app:el_expanded="false"
+                    app:el_parallax="0.5">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/ll_tuesday_start_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_4sdp"
+                            android:padding="@dimen/_4sdp"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:background="@drawable/bg_work_hour">
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/ll_tuesday_start_from_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_tuesday_text_start_from_hour"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text="@string/from_hour"
+                                    android:textColor="@color/colorSubButtonText" />
+
+                                <TextView
+                                    android:id="@+id/tv_tuesday_start_time_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text=""
+                                    android:textColor="@color/colorSubButtonText"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:background="@drawable/bg_spinner" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/ll_tuesday_start_to_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_tuesday_text_start_to_hour"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text="@string/to_hour"
+                                    android:textColor="@color/colorSubButtonText" />
+
+                                <TextView
+                                    android:id="@+id/tv_tuesday_end_time_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text=""
+                                    android:textColor="@color/colorSubButtonText"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:background="@drawable/bg_spinner" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_tuesday_end_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_4sdp"
+                            android:padding="@dimen/_4sdp"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:background="@drawable/bg_work_hour"
+                            android:layout_below="@id/ll_tuesday_start_time">
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/ll_tuesday_end_from_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_tuesday_text_end_from_hour"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text="@string/from_hour"
+                                    android:textColor="@color/colorSubButtonText" />
+
+                                <TextView
+                                    android:id="@+id/tv_tuesday_start_time_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text=""
+                                    android:textColor="@color/colorSubButtonText"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:background="@drawable/bg_spinner" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/ll_tuesday_end_to_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_tuesday_end_start_to_hour"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text="@string/to_hour"
+                                    android:textColor="@color/colorSubButtonText" />
+
+                                <TextView
+                                    android:id="@+id/tv_tuesday_end_time_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text=""
+                                    android:textColor="@color/colorSubButtonText"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:background="@drawable/bg_spinner" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                </net.cachapa.expandablelayout.ExpandableLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_wednesday_work_hour"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_spinner"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/tv_wednesday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorSubButtonText"
+                        android:text="@string/wednesday"
+                        android:textAlignment="center"
+                        android:layout_centerVertical="true"/>
+
+                    <View
+                        android:id="@+id/view_wednesday"
+                        android:layout_width="@dimen/_2sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_toEndOf="@id/tv_wednesday"
+                        android:background="#E3E3E3"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_centerVertical="true"/>
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/spinner_wednesday_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorSubButtonText"
+                        android:backgroundTint="@color/colorLightGrey"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_toEndOf="@id/view_wednesday"
+                        android:layout_toStartOf="@id/iv_wednesday_arrow_hour"/>
+
+                    <ImageView
+                        android:id="@+id/iv_wednesday_arrow_hour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_6sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+                <net.cachapa.expandablelayout.ExpandableLayout
+                    android:id="@+id/expandable_wednesday_layout_hour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:el_duration="1000"
+                    app:el_expanded="false"
+                    app:el_parallax="0.5">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/ll_wednesday_start_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_4sdp"
+                            android:padding="@dimen/_4sdp"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:background="@drawable/bg_work_hour">
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/ll_wednesday_start_from_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_wednesday_text_start_from_hour"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text="@string/from_hour"
+                                    android:textColor="@color/colorSubButtonText" />
+
+                                <TextView
+                                    android:id="@+id/tv_wednesday_start_time_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text=""
+                                    android:textColor="@color/colorSubButtonText"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:background="@drawable/bg_spinner" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/ll_wednesday_start_to_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_wednesday_text_start_to_hour"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text="@string/to_hour"
+                                    android:textColor="@color/colorSubButtonText" />
+
+                                <TextView
+                                    android:id="@+id/tv_wednesday_end_time_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text=""
+                                    android:textColor="@color/colorSubButtonText"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:background="@drawable/bg_spinner" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_wednesday_end_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_4sdp"
+                            android:padding="@dimen/_4sdp"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:background="@drawable/bg_work_hour"
+                            android:layout_below="@id/ll_wednesday_start_time">
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/ll_wednesday_end_from_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_wednesday_text_end_from_hour"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text="@string/from_hour"
+                                    android:textColor="@color/colorSubButtonText" />
+
+                                <TextView
+                                    android:id="@+id/tv_wednesday_start_time_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text=""
+                                    android:textColor="@color/colorSubButtonText"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:background="@drawable/bg_spinner" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/ll_wednesday_end_to_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_wednesday_end_start_to_hour"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text="@string/to_hour"
+                                    android:textColor="@color/colorSubButtonText" />
+
+                                <TextView
+                                    android:id="@+id/tv_wednesday_end_time_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text=""
+                                    android:textColor="@color/colorSubButtonText"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:background="@drawable/bg_spinner" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                </net.cachapa.expandablelayout.ExpandableLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_thursday_work_hour"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_spinner"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/tv_thursday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorSubButtonText"
+                        android:text="@string/thursday"
+                        android:textAlignment="center"
+                        android:layout_centerVertical="true"/>
+
+                    <View
+                        android:id="@+id/view_thursday"
+                        android:layout_width="@dimen/_2sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_toEndOf="@id/tv_thursday"
+                        android:background="#E3E3E3"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_centerVertical="true"/>
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/spinner_thursday_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorSubButtonText"
+                        android:backgroundTint="@color/colorLightGrey"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_toEndOf="@id/view_thursday"
+                        android:layout_toStartOf="@id/iv_thursday_arrow_hour"/>
+
+                    <ImageView
+                        android:id="@+id/iv_thursday_arrow_hour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_6sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+                <net.cachapa.expandablelayout.ExpandableLayout
+                    android:id="@+id/expandable_thursday_layout_hour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:el_duration="1000"
+                    app:el_expanded="false"
+                    app:el_parallax="0.5">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/ll_thursday_start_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_4sdp"
+                            android:padding="@dimen/_4sdp"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:background="@drawable/bg_work_hour">
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/ll_thursday_start_from_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_thursday_text_start_from_hour"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text="@string/from_hour"
+                                    android:textColor="@color/colorSubButtonText" />
+
+                                <TextView
+                                    android:id="@+id/tv_thursday_start_time_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text=""
+                                    android:textColor="@color/colorSubButtonText"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:background="@drawable/bg_spinner" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/ll_thursday_start_to_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_thursday_text_start_to_hour"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text="@string/to_hour"
+                                    android:textColor="@color/colorSubButtonText" />
+
+                                <TextView
+                                    android:id="@+id/tv_thursday_end_time_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text=""
+                                    android:textColor="@color/colorSubButtonText"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:background="@drawable/bg_spinner" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_thursday_end_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_4sdp"
+                            android:padding="@dimen/_4sdp"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:background="@drawable/bg_work_hour"
+                            android:layout_below="@id/ll_thursday_start_time">
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/ll_thursday_end_from_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_thursday_text_end_from_hour"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text="@string/from_hour"
+                                    android:textColor="@color/colorSubButtonText" />
+
+                                <TextView
+                                    android:id="@+id/tv_thursday_start_time_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text=""
+                                    android:textColor="@color/colorSubButtonText"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:background="@drawable/bg_spinner" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/ll_thursday_end_to_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_thursday_end_start_to_hour"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text="@string/to_hour"
+                                    android:textColor="@color/colorSubButtonText" />
+
+                                <TextView
+                                    android:id="@+id/tv_thursday_end_time_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text=""
+                                    android:textColor="@color/colorSubButtonText"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:background="@drawable/bg_spinner" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                </net.cachapa.expandablelayout.ExpandableLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_friday_work_hour"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_spinner"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/tv_friday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorSubButtonText"
+                        android:text="@string/friday"
+                        android:textAlignment="center"
+                        android:layout_centerVertical="true"/>
+
+                    <View
+                        android:id="@+id/view_friday"
+                        android:layout_width="@dimen/_2sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_toEndOf="@id/tv_friday"
+                        android:background="#E3E3E3"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_centerVertical="true"/>
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/spinner_friday_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorSubButtonText"
+                        android:backgroundTint="@color/colorLightGrey"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_toEndOf="@id/view_friday"
+                        android:layout_toStartOf="@id/iv_friday_arrow_hour"/>
+
+                    <ImageView
+                        android:id="@+id/iv_friday_arrow_hour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_6sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+                <net.cachapa.expandablelayout.ExpandableLayout
+                    android:id="@+id/expandable_friday_layout_hour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:el_duration="1000"
+                    app:el_expanded="false"
+                    app:el_parallax="0.5">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/ll_friday_start_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_4sdp"
+                            android:padding="@dimen/_4sdp"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:background="@drawable/bg_work_hour">
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/ll_friday_start_from_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_friday_text_start_from_hour"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text="@string/from_hour"
+                                    android:textColor="@color/colorSubButtonText" />
+
+                                <TextView
+                                    android:id="@+id/tv_friday_start_time_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text=""
+                                    android:textColor="@color/colorSubButtonText"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:background="@drawable/bg_spinner" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/ll_friday_start_to_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_friday_text_start_to_hour"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text="@string/to_hour"
+                                    android:textColor="@color/colorSubButtonText" />
+
+                                <TextView
+                                    android:id="@+id/tv_friday_end_time_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text=""
+                                    android:textColor="@color/colorSubButtonText"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:background="@drawable/bg_spinner" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_friday_end_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_4sdp"
+                            android:padding="@dimen/_4sdp"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:background="@drawable/bg_work_hour"
+                            android:layout_below="@id/ll_friday_start_time">
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/ll_friday_end_from_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_friday_text_end_from_hour"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text="@string/from_hour"
+                                    android:textColor="@color/colorSubButtonText" />
+
+                                <TextView
+                                    android:id="@+id/tv_friday_start_time_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text=""
+                                    android:textColor="@color/colorSubButtonText"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:background="@drawable/bg_spinner" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/ll_friday_end_to_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_friday_end_start_to_hour"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text="@string/to_hour"
+                                    android:textColor="@color/colorSubButtonText" />
+
+                                <TextView
+                                    android:id="@+id/tv_friday_end_time_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:text=""
+                                    android:textColor="@color/colorSubButtonText"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:background="@drawable/bg_spinner" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                </net.cachapa.expandablelayout.ExpandableLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/recycler_work_hours"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_below="@id/rel_toolbar"
+        android:layout_above="@id/ll_btns"/>
+
+    <LinearLayout
+        android:id="@+id/ll_btns"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/ll_permission_work_hour"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/_6sdp"
+                android:paddingBottom="@dimen/_6sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/tv_permission"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorSubButtonText"
+                    android:text="@string/table_validity"
+                    android:textAlignment="center"
+                    android:layout_centerVertical="true"/>
+
+                <View
+                    android:id="@+id/view_permission"
+                    android:layout_width="@dimen/_2sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_toEndOf="@id/tv_permission"
+                    android:background="#E3E3E3"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_centerVertical="true"/>
+
+                <com.jaredrummler.materialspinner.MaterialSpinner
+                    android:id="@+id/spinner_permissions"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorSubButtonText"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/view_permission"
+                    android:layout_toStartOf="@id/iv_permission_arrow_hour"/>
+
+                <ImageView
+                    android:id="@+id/iv_permission_arrow_hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_6sdp"
+                    android:src="@drawable/ic_icon_arrow_down"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_20sdp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_spinner">
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/btn_back"
+                android:layout_width="@dimen/_255sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/bg_btn"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:text="@string/back"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:theme="@style/ButtonGreyTheme" />
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/bg_btn"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:text="@string/save"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:textColor="@color/colorWhite"
+                android:theme="@style/ButtonMainTheme"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/_18sdp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/pb_loading"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:indeterminateTint="@color/colorPrimary"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

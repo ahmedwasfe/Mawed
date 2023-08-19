@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.raiyansoft.mawed.ui.activities.salonData.SalonActivity">
+
+    <RelativeLayout
+        android:id="@+id/rel_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:src="@drawable/ic_icon_arrow_back"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Salon page"
+            android:textColor="@color/colorMainText"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_settings"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_icon_settings"/>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_below="@id/rel_toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:id="@+id/rel_salon_images"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/view_pager_salon_images"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true">
+
+                    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                        android:id="@+id/dots_indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_4sdp"
+                        android:background="@drawable/bg_dots"
+                        app:dotsColor="@color/colorGrey"
+                        app:dotsCornerRadius="26dp"
+                        app:dotsSize="8dp"
+                        app:dotsSpacing="4dp"
+                        app:dotsWidthFactor="3"
+                        app:selectedDotColor="@color/colorPrimary"
+                        app:progressMode="true" />
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_salon_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginEnd="@dimen/_18sdp"
+                android:layout_below="@id/rel_salon_images">
+
+                <TextView
+                    android:id="@+id/tv_salon_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:textColor="@color/colorMainText"
+                    android:textSize="20sp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"/>
+
+                <ImageView
+                    android:id="@+id/iv_salon_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_icon_salon_location"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"/>
+
+                <TextView
+                    android:id="@+id/tv_employee_description"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textSize="14sp"
+                    android:textAlignment="viewStart"
+                    android:lineHeight="@dimen/_16sdp"
+                    android:textColor="@color/colorSubButtonText"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/tv_salon_name"/>
+
+                <TextView
+                    android:id="@+id/tv_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="4.7"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorSubText1"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_below="@id/tv_employee_description"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:drawableStart="@drawable/ic_icon_fill_star"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_salon_categories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLightGrey"
+                android:layout_below="@id/rel_salon_info"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/tv_all_categories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/all"
+                    android:textColor="@color/colorSubButtonText"
+                    android:textSize="16sp"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_8sdp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_salon_categories"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/tv_all_categories"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_category_type_selected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:text="Munkar"
+                android:textColor="@color/colorSubButtonText"
+                android:textSize="@dimen/_16sdp"
+                android:layout_below="@id/rel_salon_categories"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_16sdp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_barbers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_category_type_selected"
+                android:layout_marginTop="@dimen/_10sdp"/>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/pb_loading"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:indeterminateTint="@color/colorPrimary"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

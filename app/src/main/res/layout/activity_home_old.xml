@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.raiyansoft.mawed.HomeActivity">
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/activity_home_scene">
+
+        <RelativeLayout
+            android:id="@+id/rel_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_show_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_icon_menu"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginStart="@dimen/_16sdp"/>
+
+            <fragment
+                android:id="@+id/nav_host_fragments"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/btn_navigation"
+                app:defaultNavHost="true"
+                app:navGraph="@navigation/navigations" />
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/btn_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_48sdp"
+                app:labelVisibilityMode="labeled"
+                app:itemIconSize="@dimen/_16sdp"
+                app:menu="@menu/bottom_nav_menu"
+                android:background="@drawable/btn_nav_bg"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+    <LinearLayout
+        android:visibility="visible"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_20sdp">
+
+        <TextView
+            android:id="@+id/tv_upgrade_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/upgrade_account"
+            android:textColor="@color/colorMainText"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableTint="@color/colorPrimary"
+            android:drawableStart="@drawable/ic_icon_upgrade_account"/>
+
+        <TextView
+            android:id="@+id/tv_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/book_for_lady"
+            android:textColor="@color/colorMainText"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableTint="@color/colorPrimary"
+            android:drawableStart="@drawable/ic_icon_book_lady"
+            android:layout_marginTop="@dimen/_16sdp"/>
+
+        <TextView
+            android:id="@+id/tv_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/Language"
+            android:textColor="@color/colorMainText"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableTint="@color/colorPrimary"
+            android:drawableStart="@drawable/ic_icon_language"
+            android:layout_marginTop="@dimen/_36sdp"/>
+
+        <TextView
+            android:id="@+id/tv_about_us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/about_us"
+            android:textColor="@color/colorMainText"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableTint="@color/colorPrimary"
+            android:drawableStart="@drawable/ic_icon_about_us"
+            android:layout_marginTop="@dimen/_16sdp"/>
+
+        <TextView
+            android:id="@+id/tv_live_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/live_chat"
+            android:textColor="@color/colorMainText"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableTint="@color/colorPrimary"
+            android:drawableStart="@drawable/ic_icon_live_chat"
+            android:layout_marginTop="@dimen/_16sdp"/>
+
+        <TextView
+            android:id="@+id/tv_message_manager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/message_manager"
+            android:textColor="@color/colorMainText"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableTint="@color/colorPrimary"
+            android:drawableStart="@drawable/ic_icon_message_manager"
+            android:layout_marginTop="@dimen/_16sdp"/>
+
+        <TextView
+            android:id="@+id/tv_asked_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/asked_questions"
+            android:textColor="@color/colorMainText"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableTint="@color/colorPrimary"
+            android:drawableStart="@drawable/ic_icon_asked"
+            android:layout_marginTop="@dimen/_16sdp"/>
+
+        <TextView
+            android:id="@+id/tv_terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/terms_of_use"
+            android:textColor="@color/colorMainText"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableTint="@color/colorPrimary"
+            android:drawableStart="@drawable/ic_icon_terms"
+            android:layout_marginTop="@dimen/_16sdp"/>
+
+        <TextView
+            android:id="@+id/tv_notifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/notifications"
+            android:textColor="@color/colorMainText"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableTint="@color/colorPrimary"
+            android:drawableStart="@drawable/ic_icon_notifications"
+            android:layout_marginTop="@dimen/_16sdp"/>
+
+        <TextView
+            android:id="@+id/tv_create_business_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/create_business_account"
+            android:textColor="@color/colorMainText"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableTint="@color/colorPrimary"
+            android:drawableStart="@drawable/ic_icon_create_business_account"
+            android:layout_marginTop="@dimen/_16sdp"/>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:constraint_referenced_ids="tv_upgrade_account,tv_book,tv_language,tv_about_us"/>
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "866748829373",
+    "project_id": "mawed-fd126",
+    "storage_bucket": "mawed-fd126.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:866748829373:android:5b48729258308e6196b1d4",
+        "android_client_info": {
+          "package_name": "com.raiyansoft.mawed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "866748829373-dsh6o8bp6hncpoprk2doi0smhe07l26i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJdsJ7cgHkUThMqkc9MjejUHpy7Ux_v00"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "866748829373-dsh6o8bp6hncpoprk2doi0smhe07l26i.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "866748829373-v19kmds71njhds9shfb1v0qiu91nj4ie.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ios.SpaceTech.MAWED"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

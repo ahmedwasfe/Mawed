@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rel_container"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimary"
+    tools:context="com.raiyansoft.mawed.ui.activities.auth.LoginActivity">
+
+    <TextView
+        android:id="@+id/tv_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:text="@string/skip"
+        android:textSize="18sp"
+        android:textColor="@color/colorWhite"
+        android:layout_marginStart="@dimen/_26sdp"
+        android:layout_marginTop="@dimen/_36sdp"/>
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="@dimen/_44sdp"
+        android:layout_height="@dimen/_50sdp"
+        app:srcCompat="@drawable/logo"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv_skip"/>
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/auth"
+        android:textSize="40sp"
+        android:textColor="@color/colorWhite"
+        android:layout_below="@id/iv_logo"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/input_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:inputType="phone"
+        android:fontFamily="@font/montserrat_medium"
+        android:textSize="16sp"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
+        android:hint="@string/phone_number"
+        android:textAlignment="viewStart"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:focusable="auto"
+        android:focusableInTouchMode="true"
+        android:background="@drawable/bg_input"
+        android:layout_below="@id/tv_login"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/ll_check_terms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_below="@+id/input_phone_number">
+
+        <CheckBox
+            android:id="@+id/checkbox_terms"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:button="@null"
+            android:background="@drawable/bg_check_box" />
+
+        <TextView
+            android:id="@+id/tv_terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/agreement_terms"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="@dimen/_255sdp"
+        android:layout_height="@dimen/_44sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:background="@drawable/bg_btn"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:text="@string/auth"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textColor="@color/colorSubButtonText"
+        android:theme="@style/ButtonSubTheme"
+        android:layout_centerHorizontal="true"
+       android:layout_below="@+id/ll_check_terms"/>
+
+    <TextView
+        android:id="@+id/tv_text_dont_have_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:text="@string/don_have_account"
+        android:textSize="16sp"
+        android:textColor="@color/colorWhite"
+        android:layout_below="@id/btn_login"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tv_create_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/register_account"
+        android:textSize="16sp"
+        android:textColor="@color/colorLightGreen"
+        android:layout_below="@id/tv_text_dont_have_account"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_centerHorizontal="true"/>
+
+    <ProgressBar
+        android:id="@+id/pb_loading"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:indeterminateTint="@color/colorWhite"
+        android:layout_below="@id/tv_create_account"/>
+
+</RelativeLayout>

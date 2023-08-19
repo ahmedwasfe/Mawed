@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigations"
+    app:startDestination="@id/nav_home">
+
+    <fragment android:id="@+id/nav_home"
+        android:label="@string/home"
+        android:name="com.raiyansoft.mawed.ui.fragments.user.home.HomeFragment"
+        tools:layout="@layout/fragment_home"/>
+
+    <fragment android:id="@+id/nav_sections"
+        android:label="@string/sections"
+        android:name="com.raiyansoft.mawed.ui.fragments.user.sections.SectionsFragment"
+        tools:layout="@layout/fragment_sections"/>
+
+    <fragment android:id="@+id/nav_my_date"
+        android:label="@string/my_date"
+        android:name="com.raiyansoft.mawed.ui.fragments.user.myDates.MyDatesFragment"
+        tools:layout="@layout/fragment_my_dates"/>
+
+    <fragment android:id="@+id/nav_favorite"
+        android:label="@string/favorite"
+        android:name="com.raiyansoft.mawed.ui.fragments.user.favorites.FavoritesFragment"
+        tools:layout="@layout/fragment_favorite"/>
+
+    <fragment android:id="@+id/nav_profile"
+        android:label="@string/profile"
+        android:name="com.raiyansoft.mawed.ui.fragments.user.profile.ProfileFragment"
+        tools:layout="@layout/fragment_profile"/>
+
+</navigation>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1581FA</color>
+    <color name="colorPrimaryDark">#1581FA</color>
+    <color name="colorAccent">#FFFFFF</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorMainText">#3B3B3B</color>
+    <color name="colorSubText">#8F8F8F</color>
+    <color name="colorSubText1">#FED051</color>
+    <color name="colorYallow">#FED051</color>
+    <color name="colorSubButtonText">#383868</color>
+    <color name="colorLightBlue">#3793FB</color>
+    <color name="colorLightBlue1">#60A9FC</color>
+    <color name="colorLightBlue2">#E8F3FF</color>
+    <color name="colorLightGreen">#BCEEA6</color>
+    <color name="colorGrey">#E0E0E0</color>
+    <color name="colorGrey1">#CACACA</color>
+    <color name="colorGrey2">#E0E0E0</color>
+    <color name="colorLightGrey">#F5F6F9</color>
+    <color name="colorViewGrey">#E3E3E3</color>
+
+    <color name="colorDot">#FFF4EB</color>
+    <color name="colorpin">#F5F6F9</color>
+    <color name="colorStrockPin">#AFAFAF</color>
+
+    <color name="colorMail">#1581FA</color>
+    <color name="colorFemail">#B361EF</color>
+
+    <color name="colorWomnsSalon">#FBD4F4</color>
+    <color name="colorMensSalon">#1581FA</color>
+    <color name="colorMeals">#F95C36</color>
+    <color name="colorStadium">#A3EEA3</color>
+    <color name="colorDermatologyClinic">#B6F1DD</color>
+    <color name="colorDentalClinic">#B361EF</color>
+    <color name="colorOverlay2">#90222222</color>
+
+    <color name="colorRed">#F44336</color>
+    <color name="colorDarkRed">#db3236</color>
+    <color name="colorGreen">#158652</color>
+    <color name="colorGreen1">#26DA6E</color>
+    <color name="colorGreen2">#42BE0B</color>
+
+    <color name="colorDarkGold">#E0BA70</color>
+    <color name="colorDarkGold1">#ECD29A</color>
+    <color name="colorLightGold">#F8E9C2</color>
+
+    <color name="colorDarkSilver">#C3C7D2</color>
+    <color name="colorDarkSilver1">#D9DCE4</color>
+    <color name="colorLightSilver">#ECEEF3</color>
+
+    <color name="colorDarkBlue">#0080FC</color>
+    <color name="colorDarkBlue1">#1581FA</color>
+    <color name="colorLightBlue3">#0A80FB</color>
+
+    <color name="colorDarkDiamond">#DAE7F5</color>
+    <color name="colorDarkDiamond1">#E9EFF7</color>
+    <color name="colorLightDiamond">#F5F6F9</color>
+
+
+
+</resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/card_select_service">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_8sdp">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_4sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/_16sdp"
+            android:background="@drawable/bg_sheet_view" />
+
+        <TextView
+            android:id="@+id/tv_text_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/service"
+            android:textSize="18sp"
+            android:textColor="@color/colorMainText"
+            android:layout_below="@id/view"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/tv_text_select_subscribe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="@string/enter_sevice_details"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_below="@id/tv_text_service"
+            android:layout_centerHorizontal="true"/>
+
+        <EditText
+            android:id="@+id/input_service_time"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:inputType="text"
+            android:enabled="true"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="16sp"
+            android:textColor="@color/colorSubButtonText"
+            android:textColorHint="@color/colorSubButtonText"
+            android:hint="@string/time"
+            android:textAlignment="viewStart"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:focusable="auto"
+            android:focusableInTouchMode="true"
+            android:background="@drawable/bg_selected"
+            android:layout_below="@id/tv_text_select_subscribe"/>
+
+        <EditText
+            android:id="@+id/input_service_price"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:inputType="numberDecimal"
+            android:enabled="true"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="16sp"
+            android:textColor="@color/colorSubButtonText"
+            android:textColorHint="@color/colorSubButtonText"
+            android:hint="@string/price"
+            android:textAlignment="viewStart"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:focusable="auto"
+            android:focusableInTouchMode="true"
+            android:background="@drawable/bg_selected"
+            android:layout_below="@id/input_service_time"/>
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/bg_btn"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textColor="@color/colorWhite"
+            android:theme="@style/ButtonMainTheme"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_below="@+id/input_service_price"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

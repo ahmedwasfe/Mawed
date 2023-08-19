@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/_8sdp"
+    android:padding="@dimen/_4sdp"
+    android:background="@drawable/bg_selected">
+
+    <RelativeLayout
+        android:id="@+id/rel_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_4sdp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_status"
+            android:layout_width="@dimen/_8sdp"
+            android:layout_height="@dimen/_8sdp"
+            android:src="@color/colorGreen1"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/civ_status"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="An Dates with Dr. Mahmoud Ali"
+            android:textColor="@color/colorMainText"
+            android:textSize="14sp"
+            android:layout_marginStart="@dimen/_8sdp"/>
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_favorite"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_icon__favorite"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/ll_booking_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:layout_below="@id/rel_name">
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="On Thursday 7/25/2022"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:drawablePadding="@dimen/_8sdp"
+            android:drawableStart="@drawable/ic_icon_date"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="8:00 am"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:drawablePadding="@dimen/_8sdp"
+            android:drawableStart="@drawable/ic_icon_time"/>
+
+        <TextView
+            android:id="@+id/tv_remaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="1 day 16 hours left"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:drawablePadding="@dimen/_8sdp"
+            android:drawableStart="@drawable/ic_icon_remaining"/>
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Dar Al Shifa Hospital"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:drawablePadding="@dimen/_8sdp"
+            android:drawableStart="@drawable/ic_icon__location"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_26sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:layout_below="@id/ll_booking_data">
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btn_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_btn1"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/location"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:theme="@style/ButtonMainTheme" />
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btn_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_btn1"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/reservation_done"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:textColor="@color/colorGreen1"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:theme="@style/ButtonOtherTheme" />
+
+    </LinearLayout>
+
+</RelativeLayout>

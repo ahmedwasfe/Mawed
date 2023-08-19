@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_14sdp"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:background="@drawable/bg_selected">
+
+    <CheckBox
+        android:id="@+id/checkbox_service"
+        android:layout_width="@dimen/_16sdp"
+        android:layout_height="@dimen/_16sdp"
+        android:button="@null"
+        android:background="@drawable/bg_service_check_box"/>
+
+    <TextView
+        android:id="@+id/tv_service_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:text="Hair cut"
+        android:textSize="16sp"
+        android:textColor="@color/colorSubButtonText"
+        android:layout_toEndOf="@id/checkbox_service"
+        android:layout_marginStart="@dimen/_16sdp"/>
+
+    <TextView
+        android:id="@+id/tv_service_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:text="5,000 KD"
+        android:textSize="16sp"
+        android:textColor="@color/colorSubButtonText"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>

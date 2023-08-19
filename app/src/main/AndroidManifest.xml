@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<!--    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />-->
+<!--    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-sdk tools:overrideLibrary="com.google.zxing.client.android"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Mawed"
+        tools:targetApi="31"
+        android:usesCleartextTraffic="true">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAVDlsB5KumlW2ZDEcthxEiKEHPuc0XR6s" />
+
+        <activity android:name="com.raiyansoft.mawed.StartedAcivivty"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/FullScreenTheme"/>
+
+        <activity android:name="com.raiyansoft.mawed.ui.activities.auth.LoginActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.ui.activities.auth.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.ui.activities.auth.VerificationActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.HomeActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.ui.activities.search.SearchResultActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.ui.activities.SalonsActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.ui.activities.salonData.SalonActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.ui.activities.booking.BookingActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.ui.activities.paying.BookingDoneActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.ui.activities.paying.PayingActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.ui.activities.settings.EditProfileActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.ui.activities.orders.OrderSamaryActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.ui.activities.notifications.NotificationsActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.ui.activities.settings.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.ui.activities.settings.ChangePhoneNumberActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.ui.activities.businessAccont.create.CreateBusinessAccontActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.ui.activities.settings.PrivacyPolicyActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.ui.activities.settings.AboutActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.ui.activities.settings.QuestionsActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.ui.activities.settings.address.AddressesActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.ui.activities.settings.address.AddAddressActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.ui.activities.salon.HomeSalonActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.ui.activities.salon.DatesOrdersActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.ui.activities.salon.SalonServicesActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.ui.activities.salon.SalesActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.ui.activities.salon.WorkHouresActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.ui.activities.salon.EditSalonActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.ui.activities.salon.SalonOrderSamaryActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.ui.activities.settings.ContactUsActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.ScannerActitvity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity android:name="com.raiyansoft.mawed.MapActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity
+            android:name="com.raiyansoft.mawed.SplashActivity"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.raiyansoft.mawed.services.fcm.FCMServices"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

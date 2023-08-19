@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rel_container"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.raiyansoft.mawed.ui.activities.settings.ChangePhoneNumberActivity">
+
+    <RelativeLayout
+        android:id="@+id/rel_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:src="@drawable/ic_icon_arrow_back"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/change_phone_number"
+            android:textColor="@color/colorMainText"
+            android:textSize="22sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_old_phone_number"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_spinner"
+        android:layout_below="@id/rel_toolbar"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_6sdp">
+
+            <EditText
+                android:id="@+id/input_old_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="16sp"
+                android:textColor="@color/colorMainText"
+                android:textColorHint="@color/colorMainText"
+                android:hint="@string/old_phone_number"
+                android:textAlignment="viewStart"
+                android:padding="@dimen/_10sdp"
+                android:focusable="auto"
+                android:focusableInTouchMode="true"
+                android:background="@drawable/bg_spinner" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_new_phone_number"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_spinner"
+        android:layout_below="@id/ll_old_phone_number"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_6sdp">
+
+            <EditText
+                android:id="@+id/input_new_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="16sp"
+                android:textColor="@color/colorMainText"
+                android:textColorHint="@color/colorMainText"
+                android:hint="@string/new_phone_number"
+                android:textAlignment="viewStart"
+                android:padding="@dimen/_10sdp"
+                android:focusable="auto"
+                android:focusableInTouchMode="true"
+                android:background="@drawable/bg_spinner" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_btns"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_spinner"
+        android:layout_below="@id/ll_new_phone_number"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_30sdp">
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btn_send_request"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/bg_btn"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="@string/send_request"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textColor="@color/colorWhite"
+            android:theme="@style/ButtonMainTheme"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="@dimen/_18sdp"/>
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btn_cancel"
+            android:layout_width="@dimen/_255sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/bg_btn"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textColor="@color/colorSubButtonText"
+            android:theme="@style/ButtonSubTheme" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/pb_loading"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:indeterminateTint="@color/colorPrimary"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

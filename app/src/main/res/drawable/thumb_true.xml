@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/colorLightGreen"/>
+            <size android:width="@dimen/_20sdp"
+                android:height="@dimen/_20sdp"/>
+            <stroke android:color="@color/colorLightGreen"
+                android:width="@dimen/_1sdp"/>
+        </shape>
+    </item>
+
+    <item android:drawable="@drawable/ic_icon_on" android:height="@dimen/_10sdp" android:width="@dimen/_10sdp" android:gravity="center"></item>
+
+</layer-list>
